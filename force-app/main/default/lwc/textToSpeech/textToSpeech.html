@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <div class="button-container">
+         <lightning-button-icon
+            icon-name={buttonIcon}
+            variant={listenVariant}
+            onclick={convertToSpeech}
+            alternative-text="Convert to Speech"
+        ></lightning-button-icon>
+        <audio if:true={showAudio} controls autoplay >
+            <source src={blobUrl} type="audio/wav" />
+        </audio>  
+ 
+        </div>
+    </lightning-card>
+</template>
